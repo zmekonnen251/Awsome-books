@@ -43,6 +43,9 @@ addBtn.addEventListener('click', (event) => {
   localStorage.setItem('storedBook', JSON.stringify(awsomeBooks));
 
   addBookToPage(newBook);
+
+  titleField.value = '';
+  authorField.value = '';
 });
 
 const removeBook = (event) => {
