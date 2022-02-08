@@ -1,5 +1,5 @@
 const storedBooks = JSON.parse(localStorage.getItem('storedBook'));
-const awsomeBooks = storedBooks;
+const awsomeBooks = storedBooks || [];
 
 const bookContainer = document.querySelector('.book-container');
 const addBtn = document.forms[0].add;
@@ -29,7 +29,7 @@ const addBookToPage = (book) => {
   bookContainer.appendChild(newBook);
 };
 
-storedBooks.forEach((book) => {
+awsomeBooks.forEach((book) => {
   addBookToPage(book);
 });
 
