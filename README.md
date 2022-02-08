@@ -2,8 +2,6 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portfolio: setup and mobile version skeleton
-
 > The project is build a basic website that allows users to add/remove books from a list. It is done by using JavaScript objects and arrays. And also the DOM is dynamically modifying and added basic events.
 
 ## Built With
