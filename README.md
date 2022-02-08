@@ -6,8 +6,8 @@
 
 ## Built With
 
-- HTML and CSS
-- GitHub and Figma
+- HTML, javaScript
+- GitHub 
 
 ## Author
 
