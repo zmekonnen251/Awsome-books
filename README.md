@@ -9,11 +9,21 @@
 - HTML, javaScript
 - GitHub 
 
-## Author
+## Authors
+
+👤 **Zelalem**
 
 - GitHub: [GitHub](https://github.com/zmekonnen251)
 - Twitter: [Twitter](https://twitter.com/mek_zela)
 - LinkedIn: [Zelalem G. Mekonnen](https://www.linkedin.com/in/zelalem-getachew/)
+
+👤 **Mostafa Ahangarha**
+
+- GitHub: [@ahangarha](https://github.com/ahangarha)
+- Mastodon [@ahangarha@mas.to](https://mas.to/@ahangarha)
+- Twitter: [@ahangarha](https://twitter.com/ahangarha)
+- LinkedIn: [ahangarha](https://linkedin.com/in/ahangarha)
+
 
 ## Live Demo
 
