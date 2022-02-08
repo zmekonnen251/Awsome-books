@@ -1,4 +1,3 @@
-// console.log(document.forms[0]["add"]);
 const storedBooks = JSON.parse(localStorage.getItem('storedBook'));
 const awsomeBooks = storedBooks;
 
@@ -28,9 +27,6 @@ const addBookToPage = (book) => {
   newBook.appendChild(hr);
 
   bookContainer.appendChild(newBook);
-
-  //   console.log(awsomeBooks);
-  //   awsomeBooks.push({ title: titleField.value, author: authorField.value });
 };
 
 storedBooks.forEach((book) => {
@@ -58,13 +54,10 @@ const removeBook = (event) => {
     awsomeBooks.splice(awsomeBooks.indexOf(bookToBeRemoved), 1);
     localStorage.setItem('storedBook', JSON.stringify(awsomeBooks));
 
-    // const storedBooks = JSON.parse(localStorage.getItem("storedBook"));
     bookContainer.innerHTML = '';
     awsomeBooks.forEach((book) => {
       addBookToPage(book);
     });
-
-    // location.reload();
   }
 };
 
