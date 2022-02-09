@@ -4,6 +4,7 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
   "scripts": {
+    "linter": "npx eslint . && npx hint . && npx stylelint \"**/*.{css,scss}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
