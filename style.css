@@ -15,6 +15,15 @@ body {
   text-align: center;
 }
 
+.book-list {
+  width: 700px;
+  margin-top: 1rem;
+}
+
+.book-list h1 {
+  padding-bottom: 1rem;
+}
+
 .book-container {
   display: flex;
   flex-direction: column;
@@ -43,6 +52,10 @@ body {
   flex-grow: 0;
 }
 
+.add-book h2 {
+  padding-bottom: 1rem;
+}
+
 form {
   border: 1px solid black;
   padding: 1rem;
@@ -55,4 +68,8 @@ form {
 }
 input[type="text"] {
   padding: 5px;
+}
+
+dn {
+  display: none;
 }

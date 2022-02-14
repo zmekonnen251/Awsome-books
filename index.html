@@ -8,29 +8,35 @@
     <title>Awesome books</title>
   </head>
   <body>
-    <h1>Awsome books</h1>
-    <div class="book-container"></div>
+    <section class="book-list">
+      <h1>Awsome books</h1>
+      <div class="book-container"></div>
+    </section>
 
-    <h2>Add New Book</h2>
-    <form action="#">
-      <input
-        type="text"
-        name="title"
-        id="title"
-        placeholder="Title"
-        class="title"
-        required
-      /><br /><br />
-      <input
-        type="text"
-        name="author"
-        id="author"
-        placeholder="Author"
-        class="author"
-        required
-      /><br /><br />
-      <input type="submit" value="Add Book" name="add" class="add" />
-    </form>
+    <section class="add-book dn">
+      <h2>Add New Book</h2>
+      <form action="#">
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Title"
+          class="title"
+          required
+        /><br /><br />
+        <input
+          type="text"
+          name="author"
+          id="author"
+          placeholder="Author"
+          class="author"
+          required
+        /><br /><br />
+        <input type="submit" value="Add Book" name="add" class="add" />
+      </form>
+    </section>
+
+    <footer>Copyright &copy; Awesome Books Ltd</footer>
 
     <script src="script.js"></script>
   </body>
