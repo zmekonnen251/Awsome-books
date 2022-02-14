@@ -1,4 +1,4 @@
-const bookContainer = document.querySelector(".book-container");
+const bookContainer = document.querySelector('.book-container');
 const addBtn = document.forms[0].add;
 const titleField = document.forms[0].title;
 const authorField = document.forms[0].author;
@@ -6,8 +6,8 @@ const authorField = document.forms[0].author;
 class BookCollection {
   constructor(bookcontainer) {
     this.bookContainer = bookcontainer;
-    this.bookContainer.addEventListener("click", this.removeBook);
-    this.storedBooks = JSON.parse(localStorage.getItem("storedBook"));
+    this.bookContainer.addEventListener('click', this.removeBook);
+    this.storedBooks = JSON.parse(localStorage.getItem('storedBook'));
     this.awsomeBooks = this.storedBooks || [];
 
     this.awsomeBooks.forEach((book) => {
@@ -16,18 +16,18 @@ class BookCollection {
   }
 
   addBookToPage = (book) => {
-    const newBook = document.createElement("div");
-    const pTitle = document.createElement("p");
-    const pAuthor = document.createElement("p");
-    const button = document.createElement("button");
+    const newBook = document.createElement('div');
+    const pTitle = document.createElement('p');
+    const pAuthor = document.createElement('p');
+    const button = document.createElement('button');
 
-    pTitle.classList.add("title");
-    pAuthor.classList.add("author");
-    button.classList.add("remove");
+    pTitle.classList.add('title');
+    pAuthor.classList.add('author');
+    button.classList.add('remove');
 
     pTitle.textContent = book.title;
-    pAuthor.innerHTML = "<em>By: <em>" + book.author;
-    button.textContent = "Remove";
+    pAuthor.innerHTML = `<em>By: <em>${book.author}`;
+    button.textContent = 'Remove';
 
     newBook.appendChild(pTitle);
     newBook.appendChild(pAuthor);
@@ -38,12 +38,12 @@ class BookCollection {
 
   addNewBook(book) {
     this.awsomeBooks.push(book);
-    localStorage.setItem("storedBook", JSON.stringify(this.awsomeBooks));
+    localStorage.setItem('storedBook', JSON.stringify(this.awsomeBooks));
     this.addBookToPage(book);
   }
 
   removeBook = (event) => {
-    if (event.target.classList.contains("remove")) {
+    if (event.target.classList.contains('remove')) {
       const bookToBeRemoved = this.awsomeBooks.find((book) => {
         if (book.title === event.target.parentElement.firstChild.textContent) {
           return true;
@@ -52,9 +52,9 @@ class BookCollection {
       });
 
       this.awsomeBooks.splice(this.awsomeBooks.indexOf(bookToBeRemoved), 1);
-      localStorage.setItem("storedBook", JSON.stringify(this.awsomeBooks));
+      localStorage.setItem('storedBook', JSON.stringify(this.awsomeBooks));
 
-      this.bookContainer.innerHTML = "";
+      this.bookContainer.innerHTML = '';
       this.awsomeBooks.forEach((book) => {
         this.addBookToPage(book);
       });
@@ -64,7 +64,7 @@ class BookCollection {
 
 const bookCollection = new BookCollection(bookContainer);
 
-addBtn.addEventListener("click", (event) => {
+addBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const newBook = {
     title: titleField.value,
@@ -73,6 +73,30 @@ addBtn.addEventListener("click", (event) => {
 
   bookCollection.addNewBook(newBook);
 
-  titleField.value = "";
-  authorField.value = "";
+  titleField.value = '';
+  authorField.value = '';
+});
+
+// navigation
+
+const bookList = document.querySelector('.book-list');
+const addBook = document.querySelector('.add-book');
+const contact = document.querySelector('.contact');
+
+const navigation = document.querySelector('.navigation');
+navigation.addEventListener('click', (event) => {
+  event.preventDefault();
+  if (event.target.classList.contains('list-link')) {
+    bookList.classList.remove('dn');
+    contact.classList.add('dn');
+    addBook.classList.add('dn');
+  } else if (event.target.classList.contains('add-link')) {
+    addBook.classList.remove('dn');
+    contact.classList.add('dn');
+    bookList.classList.add('dn');
+  } else if (event.target.classList.contains('contact-link')) {
+    contact.classList.remove('dn');
+    addBook.classList.add('dn');
+    bookList.classList.add('dn');
+  }
 });
