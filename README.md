@@ -11,7 +11,7 @@
 
 ## Authors
 
-👤 **Zelalem**
+👤 **Zelalem Mekonnen**
 
 - GitHub: [GitHub](https://github.com/zmekonnen251)
 - Twitter: [Twitter](https://twitter.com/mek_zela)
